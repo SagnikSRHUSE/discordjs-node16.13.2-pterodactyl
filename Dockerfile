@@ -21,7 +21,7 @@ RUN sed -i 's/^# *\(en_US.UTF-8\)/\1/' /etc/locale.gen \
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
-RUN wget https://nodejs.org/dist/v16.13.2/node-v16.13.2-linux-x64.tar.gz -O /tmp && \
+RUN curl -sL -o /tmp/node-v16.13.2-linux-x64.tar.gz https://nodejs.org/dist/v16.13.2/node-v16.13.2-linux-x64.tar.gz && \
     tar -C /usr/local/ --strip-components 1 -xzf /tmp/node-v16.13.2-linux-x64.tar.gz && \
     rm -f /tmp/node-v16.13.2-linux-x64.tar.gz
 
