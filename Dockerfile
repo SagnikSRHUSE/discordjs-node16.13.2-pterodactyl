@@ -10,7 +10,7 @@ RUN apt-get update \
     && apt-get dist-upgrade -y \
     && apt-get autoremove -y \
     && apt-get autoclean \
-    && apt-get -y install dirmngr curl software-properties-common locales git cmake \
+    && apt-get -y install dirmngr curl software-properties-common locales git cmake iproute2 \
     && apt-get -y install autoconf automake g++ libtool \
     && useradd -m -d /home/container container
 
